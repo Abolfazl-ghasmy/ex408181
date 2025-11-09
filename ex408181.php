@@ -1,7 +1,7 @@
 <?php
 
 abstract class Shape {
-    const UNIT = "cm²";
+    const UNIT = "cm";
     
     abstract public function area();
 }
@@ -32,10 +32,10 @@ class Circle extends Shape {
     }
 }
 
-$rectangle = new Rectangle(5, 3);
-$circle = new Circle(4);
+$rectangle = new Rectangle(10, 5);
+$circle = new Circle(5);
 
-echo "مساحت مستطیل: " . $rectangle->area() . " " . Shape::UNIT . "\n";
-echo "مساحت دایره: " . round($circle->area(), 2) . " " . Shape::UNIT . "\n";
+echo "Rectangle area: " . $rectangle->area() . " " . Shape::UNIT . "\n";
+echo "Circle area: " . round($circle->area(), 1) . " " . Shape::UNIT . "\n";
 
 ?>
